@@ -78,16 +78,16 @@ export function loadPointsData() {
 
         if (fileInfo.type === 'effect') {
             pointObj.effectImage = { path: imagePath, name: fileInfo.name }
-            console.log(`✅ 效果图: ${agent}/${map}/${side}/${pointName} -> ${filename}`)
+            console.log(`效果图: ${agent}/${map}/${side}/${pointName} -> ${filename}`)
         } else if (fileInfo.type === 'step') {
             pointObj.steps.push({
                 stepNumber: fileInfo.stepNumber,
                 description: fileInfo.description,
                 image: imagePath,
             })
-            console.log(`📸 步骤图: ${agent}/${map}/${side}/${pointName} - 步骤${fileInfo.stepNumber}: ${fileInfo.description}`)
+            console.log(`步骤图: ${agent}/${map}/${side}/${pointName} - 步骤${fileInfo.stepNumber}: ${fileInfo.description}`)
         } else {
-            console.warn(`❌ 未识别文件: ${filename}, 请检查命名`)
+            console.warn(`未识别文件: ${filename}, 请检查命名`)
         }
     })
 
